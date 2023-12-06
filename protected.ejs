@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/profile.css" />
+</head>
+
+<body>
+    <!--Insert navbar into top of profile page-->
+    <%-include('partials/nav.ejs')%>
+<!--if user is logged in then display this message-->
+<%if(user){%>
+    <h1>Welcome to your Protected page</h1>
+    <div class="cardContainer">
+        <div class="card">
+            <div class="cardHeader">
+                <h2>Protected</h2>
+            </div>  
+        </div>
+
+    </div>
+
+<%}else{%>
+
+    <h1>You are not logged in</h1>
+<%}%>
+
+
+
+
+
+        
+       
+</body>
+
+</html>
